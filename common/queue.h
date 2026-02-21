@@ -21,6 +21,6 @@ void queue_push(Queue *queue, int data);
 
 void queue_pop(Queue *queue);
 
-int queue_front(Queue *queue);
+int *queue_front(Queue *queue);
 
 #endif

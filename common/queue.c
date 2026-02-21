@@ -35,6 +35,9 @@ void queue_pop(Queue *queue) {
     queue->size--;
 }
 
-int queue_front(Queue *queue) {
-    return queue->front;
+int *queue_front(Queue *queue) {
+    if(!queue_is_empty(queue))
+        return &(queue->front->data);
+    else
+        return NULL;
 }
