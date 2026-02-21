@@ -57,6 +57,19 @@ void llist_pop_back(SLIST *list) {
     }
 }
 
+void llist_pop_front(SLIST *list) {
+    if(list->size == NULL) {
+        list->size = 0;
+        return;
+    } else {
+        Node *front = list->head;
+        list->head = front->link;
+
+        free(front);
+    }
+    list->size--;
+}
+
 void llist_insert_at(SLIST *list, int data, int pos) {
     if(pos > list->size)
         return;
