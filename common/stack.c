@@ -2,7 +2,7 @@
 #include "stack.h"
 
 int stack_is_empty(Stack *stack) {
-    return (stack->size == 0);
+    return (stack->top == NULL);
 }
 
 int stack_size(Stack *stack) {
