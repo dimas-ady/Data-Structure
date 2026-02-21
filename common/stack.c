@@ -12,9 +12,10 @@ int stack_size(Stack *stack) {
 void stack_push(Stack *stack, int data) {
     StackNode *new_node = malloc(sizeof(StackNode));
     new_node->data = data; 
-    if(stack_is_empty(stack))
+    if(stack_is_empty(stack)) {
+        stack->size = 0;
         stack->top = new_node;
-    else {
+    } else {
         new_node->next = stack->top;
         stack->top = new_node;
     } 

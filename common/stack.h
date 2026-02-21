@@ -1,7 +1,7 @@
 #ifndef STACK_H
 #define STACK_H
 
-typedef struct StructNode StructNode;
+typedef struct StackNode StackNode;
 
 struct StackNode {
     int data;
