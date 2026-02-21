@@ -30,9 +30,13 @@ void queue_pop(Queue *queue) {
         queue->front = front->next;
         free(front);
     }
-    if(queue->front == NULL)
-        queue->rear = NULL;
     queue->size--;
+
+    if(queue->front == NULL) {
+        queue->rear = NULL;
+        queue->size = 0;
+    }
+
 }
 
 int *queue_front(Queue *queue) {
