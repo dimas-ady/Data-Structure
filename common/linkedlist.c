@@ -58,7 +58,7 @@ void llist_pop_back(SLIST *list) {
 }
 
 void llist_pop_front(SLIST *list) {
-    if(list->size == NULL) {
+    if(list->head == NULL) {
         list->size = 0;
         return;
     } else {
