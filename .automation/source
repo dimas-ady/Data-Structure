@@ -1,2 +1,3 @@
 test.c
 common/linkedlist.c
+common/stack.c
