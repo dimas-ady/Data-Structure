@@ -63,7 +63,7 @@ void llist_insert_at(SLIST *list, int data, int pos) {
     else {
         if(pos == 0) {
             llist_push_front(list, data);
-        } else if (pos == list->size) {
+        } else if (pos == list->size - 1) {
             llist_push_back(list, data);
         } else {
             Node *new = malloc(sizeof(Node));
@@ -72,7 +72,7 @@ void llist_insert_at(SLIST *list, int data, int pos) {
             for(int i = 0; i < pos - 1; i++) {
                 temp = temp->link;
             }
-            new->link = temp->link->link;
+            new->link = temp->link;
             temp->link = new;
             list->size++;
         }
