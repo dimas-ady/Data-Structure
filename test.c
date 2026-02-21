@@ -9,7 +9,7 @@ int main() {
         llist_push_back(&list, i);
     }
 
-    llist_insert_at(&list, 100, 4);
+    llist_insert_at(&list, 100, 2);
 
     for(int i  = 0; i < list.size; i++) {
         Node *temp;
