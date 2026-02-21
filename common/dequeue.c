@@ -7,7 +7,7 @@ int dequeue_is_empty(Dequeue *dequeue) {
 
 void deqeueue_push_front(Dequeue *dequeue, int data) {
     DequeueNode *new_node = malloc(sizeof(DequeueNode));
-    new_node->data;
+    new_node->data = data;
 
     if(dequeue_is_empty(dequeue)) {
         dequeue->size = 0;
@@ -23,7 +23,7 @@ void deqeueue_push_front(Dequeue *dequeue, int data) {
 
 void deqeueue_push_back(Dequeue *dequeue, int data) {
     DequeueNode *new_node = malloc(sizeof(DequeueNode));
-    new_node->data;
+    new_node->data = data;
 
     if(dequeue_is_empty(dequeue)) {
         dequeue->size = 0;
@@ -39,20 +39,20 @@ void deqeueue_push_back(Dequeue *dequeue, int data) {
 
 int *dequeue_front(Dequeue *dequeue) {
     if(!dequeue_is_empty(dequeue))
-        return dequeue->head->data;
+        return &dequeue->head->data;
     else
         return NULL;
 }
 
 int *dequeue_back(Dequeue *dequeue) {
     if(!dequeue_is_empty(dequeue))
-        return dequeue->tail->data;
+        return &dequeue->tail->data;
     else
         return NULL;
 
 }
 
-void deqeueue_pop_front(Dequeue *dequeue) {
+void dequeue_pop_front(Dequeue *dequeue) {
     DequeueNode *front = dequeue->head;
     dequeue->head = front->next;
     if(dequeue->head != NULL)

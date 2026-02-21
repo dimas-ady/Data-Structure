@@ -23,7 +23,7 @@ int *dequeue_front(Dequeue *dequeue);
 
 int *dequeue_back(Dequeue *dequeue);
 
-void deqeueue_pop_front(Dequeue *dequeue);
+void dequeue_pop_front(Dequeue *dequeue);
 
 void dequeue_pop_back(Dequeue *dequeue);
 
